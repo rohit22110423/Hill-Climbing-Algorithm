@@ -13,8 +13,6 @@ graph = {
     'I': {'G': 2, 'H': 3, 'J': 1},
     'J': {'H': 5, 'I': 1}
 }
-
-# Start node and goal node
 start_node = 'A'
 goal_node = 'J'
 
@@ -43,7 +41,6 @@ def hill_climbing(start, goal):
             current_node = min_neighbor
             found_better_path = True
         else:
-            # Stuck in a local minimum, backtrack
             if len(current_path) > 1:
                 current_path.pop()
                 current_node = current_path[-1]
